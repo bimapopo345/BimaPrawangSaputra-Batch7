@@ -5,33 +5,39 @@ Halo teman-teman! Ini adalah program donasi sederhana yang dibuat pake Java. Kam
 1. Input donasi ke beberapa yayasan
 2. Lihat daftar donasi yang udah masuk
 
-## 🚀 Cara Jalanin Program
+## 🚀 Cara Jalanin Program di VSCode
 
 ⚠️ **PENTING**: Program ini gak bisa dijalanin pake tombol Run Code di VSCode!
 
 Ikuti langkah ini ya:
 
-1. **Buka Terminal/Command Prompt**
+1. **Buka Terminal VSCode**
 
-   - Di VSCode: Klik menu `Terminal` terus pilih `New Terminal`
-   - Atau buka Command Prompt/Terminal biasa
+   - Klik menu `Terminal` di atas
+   - Pilih `New Terminal`
+   - Pastikan terminalnya udah di folder yang bener (ada tulisan `PS E:\DevLand-Digtalent\Tugas\week-3\praktik>`)
+   - Kalo belum, ketik: `cd week-3/praktik`
 
-2. **Masuk ke Folder Program**
-
-   ```bash
-   cd week-3/praktik
-   ```
-
-3. **Compile dulu programnya**
+2. **Compile Program**
 
    ```bash
    javac DonationSystem.java
    ```
 
-4. **Jalanin program**
+   > Note: Bakal muncul warning "deprecated API", tapi gapapa! Program tetep bisa jalan kok 😊
+
+3. **Jalanin Program**
+
    ```bash
    java DonationSystem
    ```
+
+   ```javascript
+   cd week-3/praktik && javac DonationSystem.java && java DonationSystem
+   ```
+
+````
+
 
 ## 📱 Cara Pake Program
 
@@ -64,9 +70,9 @@ flowchart TD
 
     E --> K[Tampilkan Daftar Donasi]
     K --> B
-```
+````
 
-## 📦 Cara Program Nyimpan Data
+## 💾 Cara Program Nyimpan Data
 
 Program ini nyimpen data pake array sederhana:
 
@@ -78,10 +84,11 @@ Data ini cuma kesimpan selama program jalan aja ya!
 
 ## 💡 Tips Pake Program
 
-1. **Pastikan:**
+1. **Di Terminal VSCode:**
 
-   - Jalanin lewat terminal/command prompt
-   - JANGAN pake extension Run Code
+   - Pastikan path-nya udah bener (ada tulisan `praktik>` di akhir)
+   - Warning pas compile bisa diabaikan
+   - Kalo error "command not found", pastikan Java udah keinstall
 
 2. **Waktu Input:**
 
@@ -90,8 +97,13 @@ Data ini cuma kesimpan selama program jalan aja ya!
    - Gak usah pake Rp atau titik
 
 3. **Kalo Error:**
+
    - Cek kode yayasan udah bener belum
    - Cek jumlah donasi udah bener belum (angka doang)
    - Coba jalanin ulang programnya
+
+4. **Cara Keluar Program:**
+   - Pilih menu 0
+   - Atau pencet Ctrl+C
 
 Selamat mencoba! 🎉
