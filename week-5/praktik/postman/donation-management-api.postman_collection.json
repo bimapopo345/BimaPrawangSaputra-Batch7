@@ -1,0 +1,103 @@
+{
+  "info": {
+    "name": "Donation Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Create Philanthropy",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/philanthropies",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "philanthropies"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Yayasan Peduli Sesama\"\n}"
+        }
+      }
+    },
+    {
+      "name": "2. List Philanthropies",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/philanthropies",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "philanthropies"]
+        }
+      }
+    },
+    {
+      "name": "3. Create Donation",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/donations",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "donations"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"userId\": 1,\n    \"philanthropyId\": 1,\n    \"amount\": 150000\n}"
+        }
+      }
+    },
+    {
+      "name": "4. Create Expense",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/expenses",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "expenses"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"philanthropyId\": 1,\n    \"description\": \"Bantuan sembako\",\n    \"amount\": 50000\n}"
+        }
+      }
+    },
+    {
+      "name": "5. View Ledger",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/philanthropies/1/ledger",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "philanthropies", "1", "ledger"]
+        }
+      }
+    }
+  ]
+}
